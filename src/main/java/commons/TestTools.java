@@ -15,10 +15,16 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created By Alexandr Kolesov 26.11.2019
+ */
 public class TestTools {
 
     private static final String RUS_UPPER = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
     private static final String RUS_LOWER = RUS_UPPER.toLowerCase();
+    private static final String USER_LOGIN = "iqoptiontest94";
+    private static final String USER_EMAIL = USER_LOGIN + "@mail.ru";
+    private static final String USER_PASSWORD = "Qw01Option";
 
     public static String getCurrentDataTime(String format) {
         DateFormat dateFormat = new SimpleDateFormat(format);
@@ -115,7 +121,10 @@ public class TestTools {
                 .replace("**random_password**", generatePassword())
                 .replace("**random_number**", generateNumber(8))
                 .replace("**random_uuid**", generateUUIDasString())
-                .replace("**current_data**", getCurrentDataTime("yyyy-MM-dd HH:mm:ss"));
+                .replace("**current_data**", getCurrentDataTime("yyyy-MM-dd HH:mm:ss"))
+                .replace("**user_login**", USER_LOGIN)
+                .replace("**user_email**", USER_EMAIL)
+                .replace("**user_password**", USER_PASSWORD);
     }
 }
 

@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Created By Alexandr Kolesov 26.11.2019
+ */
 public class BasePage {
 
     private SeleniumMethods methods = new SeleniumMethods();

@@ -1,5 +1,8 @@
 package commons;
 
+/**
+ * Created By Alexandr Kolesov 26.11.2019
+ */
 public class TestLogger {
 
     private static StringBuilder _instance = new StringBuilder();

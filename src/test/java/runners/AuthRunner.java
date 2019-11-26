@@ -13,5 +13,7 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"pretty", "html:target/cucumber-reports/auth"},
         monochrome = true
 )
+
 public class AuthRunner extends AbstractTestNGCucumberTests {
+
 }

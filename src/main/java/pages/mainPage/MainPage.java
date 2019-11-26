@@ -1,7 +1,6 @@
 package pages.mainPage;
 
 import commons.SeleniumMethods;
-import commons.TestTools;
 import driverManager.DriverManager;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.Step;
@@ -14,6 +13,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static commons.TestTools.replaceString;
+
+/**
+ * Created By Alexandr Kolesov 26.11.2019
+ */
 public class MainPage extends BasePage  {
 
     private final Map<String, By> mainPageMap = new HashMap<String, By>(){};
@@ -70,7 +74,7 @@ public class MainPage extends BasePage  {
 
     @Step("User click on element {0}")
     public void setText(String text, String webElement){
-        methods.setText(getWebElements(mainPageMap, webElement), TestTools.replaceString(text.toLowerCase()));
+        methods.setText(getWebElements(mainPageMap, webElement), replaceString(text.toLowerCase()));
     }
 
     @Step("User get text from element {0}")
@@ -90,9 +94,9 @@ public class MainPage extends BasePage  {
 
         for (Map<String, String> form : signForms) {
             String actual = getText(form.get("Field"));
-            String expected = form.get("Value");
-            softAssert.assertEquals(getText(form.get("Field")), form.get("Value"),
-                    "\nText " + actual + " and " + expected + "is not equals");
+            String expected = replaceString(form.get("Value"));
+            softAssert.assertEquals(actual, expected, "\nActual text '" + actual +
+                    "' and expected '" + expected + "' is not equals");
         }
         softAssert.assertAll();
     }

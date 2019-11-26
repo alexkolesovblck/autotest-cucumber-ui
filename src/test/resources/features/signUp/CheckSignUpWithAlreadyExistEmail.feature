@@ -10,7 +10,7 @@ Feature: CheckSignUpWithAlreadyExistEmail
     When User click on 'Окно регистрации'
     And User set text '**random_string**' in 'Имя' field
     And User set text '**random_string**' in 'Фамилия' field
-    And User set text 'iqoptiontest94@mail.ru' in 'E-mail' field
+    And User set text '**user_email**' in 'E-mail' field
     And User set text '**random_password**' in 'Пароль' field
 
     When User click on 'Я принимаю «Положения и условия» и подтверждаю, что мне 18 лет или больше.'

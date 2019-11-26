@@ -9,7 +9,7 @@ Feature: CheckSignUpWithInvalidFirstName
     When User click on 'Регистрация'
     When User click on 'Окно регистрации'
     And User set text '**random_string**' in 'Фамилия' field
-    And User set text '**random_string**' in 'E-mail' field
+    And User set text '**user_email**' in 'E-mail' field
     And User set text '**random_password**' in 'Пароль' field
 
     When User click on 'Я принимаю «Положения и условия» и подтверждаю, что мне 18 лет или больше.'

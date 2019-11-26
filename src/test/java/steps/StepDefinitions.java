@@ -8,6 +8,9 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.mainPage.MainPage;
 
+/**
+ * Created By Alexandr Kolesov 26.11.2019
+ */
 public class StepDefinitions {
 
     private MainPage mainPage = new MainPage();

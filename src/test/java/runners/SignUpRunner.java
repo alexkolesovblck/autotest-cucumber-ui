@@ -13,5 +13,7 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"pretty", "html:target/cucumber-reports/signUp"},
         monochrome = true
 )
+
 public class SignUpRunner extends AbstractTestNGCucumberTests {
+
 }
