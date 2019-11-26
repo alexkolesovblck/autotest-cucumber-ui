@@ -1,8 +1,8 @@
 @negative
 Feature: CheckSignUpWithInvalidPassword
 
-  Scenario Outline: CheckSignUpWithInvalidPassword
-    Given User get browser as <browser>
+  Scenario: CheckSignUpWithInvalidPassword
+    Given User get browser as chrome
     Given User open 'iqoption.com' page
     Given User set language as 'Русский'
 
@@ -16,8 +16,3 @@ Feature: CheckSignUpWithInvalidPassword
     When User click on 'Я принимаю «Положения и условия» и подтверждаю, что мне 18 лет или больше.'
     When User click on 'Открыть счет бесплатно'
     Then User see message text 'Пароль должен быть длиной не менее 6 символов и содержать хотя бы 1 букву и 1 цифру' on field 'Неверный пароль'
-
-    Examples:
-      | browser | email                  |
-      | chrome  | iqoptiontest94@mail.ru |
-      #| opera   | iqoptiontest94@mail.ru |

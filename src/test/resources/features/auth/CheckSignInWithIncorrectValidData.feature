@@ -1,8 +1,8 @@
 @negative
 Feature: CheckSignInWithIncorrectValidData
 
-  Scenario Outline: CheckSignInWithIncorrectValidData
-    Given User get browser as <browser>
+  Scenario: CheckSignInWithIncorrectValidData
+    Given User get browser as chrome
     Given User open 'iqoption.com' page
     Given User set language as 'Русский'
 
@@ -12,8 +12,3 @@ Feature: CheckSignInWithIncorrectValidData
 
     When User click on 'Авторизоваться'
     Then User see message text 'Неправильный логин или пароль' on field 'Ошибка входа'
-
-    Examples:
-      | browser | email                  |
-      | chrome  | iqoptiontest94@mail.ru |
-      #| opera   | iqoptiontest94@mail.ru |

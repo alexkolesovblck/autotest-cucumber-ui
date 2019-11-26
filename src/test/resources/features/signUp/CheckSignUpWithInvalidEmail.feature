@@ -1,8 +1,8 @@
 @negative
 Feature: CheckSignUpWithInvalidEmail
 
-  Scenario Outline: CheckSignUpWithInvalidEmail
-    Given User get browser as <browser>
+  Scenario: CheckSignUpWithInvalidEmail
+    Given User get browser as chrome
     Given User open 'iqoption.com' page
     Given User set language as 'Русский'
 
@@ -16,8 +16,3 @@ Feature: CheckSignUpWithInvalidEmail
     When User click on 'Я принимаю «Положения и условия» и подтверждаю, что мне 18 лет или больше.'
     When User click on 'Открыть счет бесплатно'
     Then User see message text 'Неверный e-mail' on field 'Неверный e-mail'
-
-    Examples:
-      | browser | email                  |
-      | chrome  | iqoptiontest94@mail.ru |
-      #| opera   | iqoptiontest94@mail.ru |

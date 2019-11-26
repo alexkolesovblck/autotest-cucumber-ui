@@ -1,7 +1,7 @@
 @negative
 Feature: CheckSignInWithIncorrectEmail
 
-  Scenario Outline: CheckSignInWithIncorrectEmail
+  Scenario: CheckSignInWithIncorrectEmail
     Given User get browser as chrome
     Given User open 'iqoption.com' page
     Given User set language as 'Русский'
@@ -12,8 +12,3 @@ Feature: CheckSignInWithIncorrectEmail
 
     When User click on 'Авторизоваться'
     Then User see message text 'Неверный e-mail' on field 'Неверный e-mail'
-
-    Examples:
-      | browser | email                  |
-      | chrome  | iqoptiontest94@mail.ru |
-      #| opera   | iqoptiontest94@mail.ru |
