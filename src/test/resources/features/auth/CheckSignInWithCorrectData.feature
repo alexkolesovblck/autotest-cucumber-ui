@@ -9,7 +9,7 @@ Feature: CheckSignInWithCorrectData
     When User click on 'Войти'
     When User click on 'Mail.ru'
     And User set text 'iqoptiontest94' in 'Логин на стороне Mail.ru' field
-    And User set text 'Qw01KamOption' in 'Пароль на стороне Mail.ru' field
+    And User set text 'Qw01Option' in 'Пароль на стороне Mail.ru' field
 
     When User click on 'Войти и разрешить на стороне Mail.ru'
     Then User see field with value where:
