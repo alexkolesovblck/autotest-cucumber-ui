@@ -1,13 +1,12 @@
-package pages.mainPage;
+package pages;
 
-import commons.SeleniumMethods;
-import driverManager.DriverManager;
+import manager.SeleniumManager;
+import manager.DriverManager;
 import io.cucumber.datatable.DataTable;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
-import pages.BasePage;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +20,7 @@ import static commons.TestTools.replaceString;
 public class MainPage extends BasePage  {
 
     private final Map<String, By> mainPageMap = new HashMap<String, By>(){};
-    private SeleniumMethods methods = new SeleniumMethods();
+    private SeleniumManager methods = new SeleniumManager();
     private WebDriver driver;
 
     private String invalidField(String text) { return "//span[contains(@class, 'iqInput__error')]//span[contains(text(), '" + text + "')]"; }

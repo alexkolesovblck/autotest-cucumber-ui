@@ -1,11 +1,11 @@
 package steps;
 
 import commons.TestLogger;
-import driverManager.DriverManager;
+import manager.DriverManager;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,9 +29,8 @@ public class Hooks {
         TestLogger.message( "***************************************************************************", false, false);
     }
 
-
-    @BeforeStep()
-    public void beforeStep(Scenario scenario){
+    @AfterStep()
+    public void afterStep(Scenario scenario){
         TestLogger.message("\n+ " + scenario.getStatus(), false, false);
     }
 

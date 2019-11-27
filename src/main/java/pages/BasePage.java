@@ -1,6 +1,6 @@
 package pages;
 
-import commons.SeleniumMethods;
+import manager.SeleniumManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class BasePage {
 
-    private SeleniumMethods methods = new SeleniumMethods();
+    private SeleniumManager methods = new SeleniumManager();
 
     public By getBy(Map<String, By> map, String key) {
         if (!map.containsKey(key))

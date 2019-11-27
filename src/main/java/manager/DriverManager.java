@@ -1,4 +1,4 @@
-package driverManager;
+package manager;
 
 import io.github.bonigarcia.wdm.WebDriverManagerException;
 import org.openqa.selenium.WebDriver;

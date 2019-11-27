@@ -1,6 +1,6 @@
 package steps;
 
-import driverManager.DriverManager;
+import manager.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.qameta.allure.Step;

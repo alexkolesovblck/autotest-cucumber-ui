@@ -10,7 +10,10 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features/auth",
         glue = {"steps"},
         tags = {"~@Ignore"},
-        plugin = {"pretty", "html:target/cucumber-reports/auth"},
+        plugin = {"pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"},
         monochrome = true
 )
 

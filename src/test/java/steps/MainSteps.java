@@ -6,12 +6,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import pages.mainPage.MainPage;
+import pages.MainPage;
 
 /**
  * Created By Alexandr Kolesov 26.11.2019
  */
-public class StepDefinitions {
+public class MainSteps {
 
     private MainPage mainPage = new MainPage();
 

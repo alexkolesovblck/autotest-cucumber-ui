@@ -1,6 +1,5 @@
-package commons;
+package manager;
 
-import driverManager.DriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -9,7 +8,7 @@ import java.util.List;
 /**
  * Created By Alexandr Kolesov 06.10.2019
  */
-public class SeleniumMethods {
+public class SeleniumManager {
 
     private WebElement element;
     private String text;
