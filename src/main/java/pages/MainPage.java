@@ -94,8 +94,7 @@ public class MainPage extends BasePage  {
         for (Map<String, String> form : signForms) {
             String actual = getText(form.get("Field"));
             String expected = replaceString(form.get("Value"));
-            softAssert.assertEquals(actual, expected, "\nActual text '" + actual +
-                    "' and expected '" + expected + "' is not equals");
+            softAssert.assertEquals(actual, expected);
         }
         softAssert.assertAll();
     }
